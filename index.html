@@ -1,38 +1,278 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernando</title>
+    <title>Fernando & Cíntia — Carta de Amor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background-color: #f7ede2;
+            background-image: radial-gradient(#e0c3fc 0.5px, transparent 0.5px), radial-gradient(#e0c3fc 0.5px, #f7ede2 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            color: #2b2d42;
+            line-height: 1.8;
+            padding: 40px 15px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .carta-envelope {
+            background: #fffbf7;
+            padding: 40px 50px;
+            border-radius: 12px;
+            border: 1px solid #f3d5d8;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), inset 0 0 100px rgba(230, 57, 70, 0.03);
+            position: relative;
+        }
+
+        .carta-envelope::before {
+            content: '💌';
+            font-size: 2rem;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fffbf7;
+            padding: 0 10px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #f4acb7;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #d62828;
+            font-family: 'Great Vibes', cursive, serif;
+            font-size: 3.5rem;
+            font-weight: normal;
+        }
+
+        .img-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            border: 8px solid #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        section {
+            background: transparent;
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: #9d0208;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            border-left: 4px solid #e63946;
+            padding-left: 12px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            text-indent: 25px;
+            font-size: 1.05rem;
+        }
+
+        .assinatura {
+            text-align: right;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: #d62828;
+            margin-top: 10px;
+        }
+
+        ul {
+            padding-left: 30px;
+            list-style-type: '💖 ';
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .declaracao {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            background-color: #fff0f3;
+            border: 2px solid #ffccd5;
+            box-shadow: inset 0 0 15px rgba(230, 57, 70, 0.05);
+        }
+
+        .declaracao h3 {
+            color: #d62828;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            letter-spacing: 1.5px;
+        }
+
+        .declaracao .texto-apelidos {
+            color: #5c0632;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+            text-indent: 0;
+            margin-bottom: 25px;
+        }
+
+        .lista-traducoes {
+            color: #d62828;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-align: center;
+            text-indent: 0;
+            line-height: 2;
+        }
+
+        @media (max-width: 600px) {
+            .carta-envelope {
+                padding: 25px 20px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <header>
-        <h1> <font color="red"> fernando</font></h1>
-    </header>
-    <img src="fernando.jpg" widht="400" height="200">
-<hr>
-<h3>Sobre mim</h3>
-<li>Me chamo Fernando tenho 16 anos, meu maior sonho e ver o Neymar e ir oara o Rio de Janeiro, desde pequeno sempre fui apaixonado por motos, infelizmente sofri um acidente com uma moto que eu somhava em ter,
-    mais felizmente eu estou bem, agora estou estudando informatica e pretendo me aprofundar nisso e me tornar um profissional.
-    Pretendo me formar numa boa faculdade e quero me casar com a menina quwe estou namorando pretendo ter uma familia com ela.
-</li>
-<ul>
-   <hr>
-   <h3>Detalhes sobre mim</h3>
-    <li>comprar uma moto</li>
-    <li>fazer uma boa faculdade</li>
-    <li>pegar um bom emprego para meu futuro</li>
-    <li>dar orgulho para meus pais</li>
+    <div class="carta-envelope">
+        <header>
+            <h1>Fernando & Cíntia</h1>
+        </header>
 
-</ul>
+        <div class="img-container">
+            <img src="fernando.jpg" alt="Foto de Fernando e Cíntia">
+        </div>
 
+        <main>
+            <section>
+                <h2>Para Meu Amor</h2>
+                <p>
+                    Querida Cíntia,
+                </p>
+                <p>
+                    Escrevo esta carta para deixar gravado, com todas as letras, o tamanho do amor e do orgulho que sinto por você. Você é o grande amor da minha vida, a mulher dos meus sonhos, minha baixinha, minha princesa, meu anjo, minha pititca... minha Cíntia.
+                </p>
+                <p>
+                    A vida tem seus caminhos e desafios. Passei por momentos difíceis, como o acidente com a moto que eu tanto sonhava em ter, mas continuo aqui, bem, estudando informática e me dedicando para construir um futuro sólido ao seu lado. Quero me aprofundar nos meus estudos, me formar em uma excelente faculdade, conseguir um bom emprego, realizar o sonho de ter nossa moto e dar orgulho aos meus pais. Mas, acima de tudo, o meu maior objetivo e desejo é dedicar todo o meu amor a você e construir a nossa família.
+                </p>
+                <p>
+                    Quero que você saiba, com toda a certeza do meu coração, que estou com você para o que der e vier, independentemente da hora, do lugar ou das dificuldades que apareçam no caminho. Não te largo por nada neste mundo. É você e eu, até o fim da minha vida.
+                </p>
+                <p>
+                    O meu maior sonho é ver você vestida de branco caminhando em direção ao altar, enquanto nossos filhos seguram o seu véu. Quero realizar cada meta e viver cada momento ao seu lado.
+                </p>
+                <p>
+                    Eu te amo, meu amor! Hoje e para sempre.
+                </p>
+                <div class="assinatura">
+                    Com todo o meu amor e carinho,<br>Fernando
+                </div>
+            </section>
 
+            <section>
+                <h2>Nossos Objetivos e Futuro</h2>
+                <ul>
+                    <li>Comprar uma moto</li>
+                    <li>Fazer uma boa faculdade</li>
+                    <li>Pegar um bom emprego para meu futuro</li>
+                    <li>Dar orgulho para meus pais</li>
+                    <li>Dar todo meu amor para minha mulher</li>
+                    <li>Ter meus filhos com essa mulher maravilhosa</li>
+                </ul>
+            </section>
 
-
-
-
-
+            <div class="declaracao">
+                <h3>EU TE AMO, MEU AMOR!!!</h3>
+                <p class="texto-apelidos">
+                    Para o grande amor da minha vida e para a mulher que vou ver de branco no altar com nossos baixinhos como noivinhos segurando seu véu branco. 
+                    Para demonstrar o orgulho que sinto por ela, eu te amo, Cíntia Roden Arente — mais conhecida como meu amor, minha vida, minha baixinha, minha princesa, moh, mor, amor, meu bem, meu anjo, minha nega, minha Cintiazinha, minha pititca!
+                </p>
+                
+                <p class="lista-traducoes">
+                    Brasil: Eu te amo<br>
+                    África do Sul: Ek het jou lief<br>
+                    Alemanha: Ich liebe dich<br>
+                    Arábia Saudita: Ana uhibbuki<br>
+                    Argentina: Te amo<br>
+                    Armênia: Es kez sirum em<br>
+                    Bélgica: Ik hou van jou<br>
+                    Bulgária: Obicham te<br>
+                    Camboja: Sro shapes neak<br>
+                    China: Wo ai ni<br>
+                    Coreia do Sul: Saranghae<br>
+                    Croácia: Volim te<br>
+                    Dinamarca: Jeg elsker dig<br>
+                    Eslováquia: Ľúbim ťa<br>
+                    Eslovênia: Ljubim te<br>
+                    Espanha: Te amo<br>
+                    Estados Unidos: I love you<br>
+                    Etiópia: Afekrishalehu<br>
+                    Filipinas: Mahal kita<br>
+                    Finlândia: Minä rakastan sinua<br>
+                    França: Je t'aime<br>
+                    Grécia: S'agapo<br>
+                    Haiti: Mwen renmen ou<br>
+                    Hungria: Szeretlek<br>
+                    Índia: Main tumse pyar karta hoon<br>
+                    Indonésia: Saya cinta kamu<br>
+                    Irã: Dooset daram<br>
+                    Irlanda: Is breá liom tú<br>
+                    Islândia: Ég elska þig<br>
+                    Israel: Ani ohev otach<br>
+                    Itália: Ti amo<br>
+                    Japão: Aishiteru<br>
+                    Lituânia: Aš tave myliu<br>
+                    Malásia: Saya cintakan mu<br>
+                    Mongólia: Bi nand durtai<br>
+                    Noruega: Jeg elsker deg<br>
+                    Países Baixos: Ik hou van je<br>
+                    Polônia: Kocham cię<br>
+                    Portugal: Amo-te<br>
+                    Quênia: Nakupenda<br>
+                    Romênia: Te iubesc<br>
+                    Rússia: Ya tebya lyublyu<br>
+                    Sérvia: Volim te<br>
+                    Suécia: Jag älskar dig<br>
+                    Tailândia: Phom rak khun<br>
+                    Tchéquia: Miluji tě<br>
+                    Turquia: Seni seviyorum<br>
+                    Ucrânia: Ya tebe kokhayu<br>
+                    Vietnã: Anh yêu em
+                </p>
+            </div>
+        </main>
+    </div>
 
 </body>
+
 </html>
