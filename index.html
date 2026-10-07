@@ -7,7 +7,7 @@
     <title>Fernando & Cíntia — Carta de Amor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -17,146 +17,246 @@
 
         body {
             font-family: 'Lora', Georgia, serif;
-            background-color: #f7ede2;
-            background-image: radial-gradient(#e0c3fc 0.5px, transparent 0.5px), radial-gradient(#e0c3fc 0.5px, #f7ede2 0.5px);
-            background-size: 20px 20px;
-            background-position: 0 0, 10px 10px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            min-height: 100vh;
             color: #2b2d42;
             line-height: 1.8;
             padding: 40px 15px;
-            max-width: 850px;
-            margin: 0 auto;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Corações caindo no fundo */
+        .heart-particle {
+            position: fixed;
+            top: -10%;
+            font-size: 1.2rem;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+            z-index: 0;
+            opacity: 0.7;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
         }
 
         .carta-envelope {
-            background: #fffbf7;
-            padding: 40px 50px;
-            border-radius: 12px;
-            border: 1px solid #f3d5d8;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), inset 0 0 100px rgba(230, 57, 70, 0.03);
             position: relative;
+            z-index: 1;
+            background: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 182, 193, 0.5);
+            box-shadow: 0 15px 35px rgba(214, 40, 40, 0.15), 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
         }
 
         .carta-envelope::before {
             content: '💌';
-            font-size: 2rem;
+            font-size: 2.5rem;
             position: absolute;
-            top: -20px;
+            top: -25px;
             left: 50%;
             transform: translateX(-50%);
-            background: #fffbf7;
-            padding: 0 10px;
+            background: #ffffff;
+            padding: 0 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             border-bottom: 2px dashed #f4acb7;
-            padding-bottom: 20px;
+            padding-bottom: 25px;
         }
 
         h1 {
             color: #d62828;
-            font-family: 'Great Vibes', cursive, serif;
-            font-size: 3.5rem;
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
             font-weight: normal;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .subtitulo-casal {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #e63946;
+            margin-top: 5px;
         }
 
         .img-container {
             text-align: center;
-            margin: 30px 0;
+            margin: 35px 0;
         }
 
         .img-container img {
             max-width: 100%;
             height: auto;
-            border-radius: 15px;
-            border: 8px solid #ffffff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 10px solid #ffffff;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .img-container img:hover {
+            transform: scale(1.02);
         }
 
         section {
-            background: transparent;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
 
         h2 {
             color: #9d0208;
             font-family: 'Playfair Display', serif;
-            margin-bottom: 15px;
-            font-size: 1.6rem;
-            text-transform: capitalize;
-            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
             border-left: 4px solid #e63946;
-            padding-left: 12px;
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
         }
 
         p {
             margin-bottom: 20px;
             text-align: justify;
             text-indent: 25px;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
+            color: #333;
         }
 
         .assinatura {
             text-align: right;
             font-family: 'Great Vibes', cursive;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: #d62828;
-            margin-top: 10px;
+            margin-top: 20px;
+            line-height: 1.2;
         }
 
-        ul {
-            padding-left: 30px;
-            list-style-type: '💖 ';
+        .lista-objetivos {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
 
-        li {
-            margin-bottom: 10px;
-            font-size: 1.05rem;
+        .lista-objetivos li {
+            background: #fff0f3;
+            padding: 12px 20px;
+            border-radius: 12px;
+            border-left: 4px solid #ff4d6d;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #590d22;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .declaracao {
             text-align: center;
-            padding: 30px 20px;
-            border-radius: 15px;
-            background-color: #fff0f3;
-            border: 2px solid #ffccd5;
-            box-shadow: inset 0 0 15px rgba(230, 57, 70, 0.05);
+            padding: 35px 25px;
+            border-radius: 20px;
+            background: linear-gradient(145deg, #fff0f3 0%, #ffccd5 100%);
+            border: 1px solid #ffb3c1;
+            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.08);
+            margin-top: 40px;
         }
 
         .declaracao h3 {
             color: #d62828;
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 15px;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
         }
 
         .declaracao .texto-apelidos {
-            color: #df0575;
+            color: #a4133c;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             text-align: center;
             text-indent: 0;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
 
-        .lista-traducoes {
-            color: #d62828;
+        /* Grid de Idiomas */
+        .grid-traducoes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            text-align: left;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .item-traducao {
+            font-size: 0.95rem;
+            color: #800f2f;
+            padding: 6px 10px;
+            border-bottom: 1px dashed #ffb3c1;
+        }
+
+        .item-traducao strong {
+            color: #c9184a;
+        }
+
+        .btn-interativo {
+            display: block;
+            margin: 30px auto 0 auto;
+            background: linear-gradient(45deg, #ff4d6d, #c9184a);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 1.05rem;
-            text-align: center;
-            text-indent: 0;
-            line-height: 2;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(201, 24, 74, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-interativo:hover {
+            transform: translateY(-3deg);
+            box-shadow: 0 8px 20px rgba(201, 24, 74, 0.4);
         }
 
         @media (max-width: 600px) {
             .carta-envelope {
-                padding: 25px 20px;
+                padding: 30px 20px;
             }
             h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
+            }
+            .grid-traducoes {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -167,6 +267,7 @@
     <div class="carta-envelope">
         <header>
             <h1>Fernando & Cíntia</h1>
+            <div class="subtitulo-casal">Para Sempre Juntos</div>
         </header>
 
         <div class="img-container">
@@ -176,9 +277,7 @@
         <main>
             <section>
                 <h2>Para Meu Amor</h2>
-                <p>
-                    Querida Cíntia,
-                </p>
+                <p>Querida Cíntia,</p>
                 <p>
                     Escrevo esta carta para deixar gravado, com todas as letras, o tamanho do amor e do orgulho que sinto por você. Você é o grande amor da minha vida, a mulher dos meus sonhos, minha baixinha, minha princesa, meu anjo, minha pititca... minha Cíntia.
                 </p>
@@ -201,78 +300,105 @@
 
             <section>
                 <h2>Nossos Objetivos e Futuro</h2>
-                <ul>
-                    <li>Comprar uma moto</li>
-                    <li>Fazer uma boa faculdade</li>
-                    <li>Pegar um bom emprego para meu futuro</li>
-                    <li>Dar orgulho para meus pais</li>
-                    <li>Dar todo meu amor para minha mulher</li>
-                    <li>Ter meus filhos com essa mulher maravilhosa</li>
+                <ul class="lista-objetivos">
+                    <li>🏍️ Comprar uma moto</li>
+                    <li>🎓 Fazer uma boa faculdade</li>
+                    <li>💼 Conquistar um excelente emprego</li>
+                    <li>👨‍👩‍👦 Dar orgulho para meus pais</li>
+                    <li>❤️ Dedicar todo meu amor a você</li>
+                    <li>👶 Ter nossos filhos e construir nossa família</li>
                 </ul>
             </section>
 
             <div class="declaracao">
                 <h3>EU TE AMO, MEU AMOR!!!</h3>
                 <p class="texto-apelidos">
-                    Para o grande amor da minha vida e para a mulher que vou ver de branco no altar com nossos baixinhos como noivinhos segurando seu véu branco. 
-                    Para demonstrar o orgulho que sinto por ela, eu te amo, Cíntia Roden Arente — mais conhecida como meu amor, minha vida, minha baixinha, minha princesa, moh, mor, amor, meu bem, meu anjo, minha nega, minha Cintiazinha, minha pititca!
+                    Para o grande amor da minha vida e para a mulher que vou ver de branco no altar com nossos baixinhos como noivinhos segurando seu véu branco.<br><br>
+                    <strong>Cíntia Roden Arente</strong> — mais conhecida como meu amor, minha vida, minha baixinha, minha princesa, moh, mor, amor, meu bem, meu anjo, minha nega, minha Cintiazinha, minha pititca!
                 </p>
+
+                <h4 style="color: #9d0208; font-family: 'Playfair Display', serif; margin-bottom: 15px;">Dizendo "Eu Te Amo" Pelo Mundo 🌍</h4>
                 
-                <p class="lista-traducoes">
-                    Brasil: Eu te amo<br>
-                    África do Sul: Ek het jou lief<br>
-                    Alemanha: Ich liebe dich<br>
-                    Arábia Saudita: Ana uhibbuki<br>
-                    Argentina: Te amo<br>
-                    Armênia: Es kez sirum em<br>
-                    Bélgica: Ik hou van jou<br>
-                    Bulgária: Obicham te<br>
-                    Camboja: Sro shapes neak<br>
-                    China: Wo ai ni<br>
-                    Coreia do Sul: Saranghae<br>
-                    Croácia: Volim te<br>
-                    Dinamarca: Jeg elsker dig<br>
-                    Eslováquia: Ľúbim ťa<br>
-                    Eslovênia: Ljubim te<br>
-                    Espanha: Te amo<br>
-                    Estados Unidos: I love you<br>
-                    Etiópia: Afekrishalehu<br>
-                    Filipinas: Mahal kita<br>
-                    Finlândia: Minä rakastan sinua<br>
-                    França: Je t'aime<br>
-                    Grécia: S'agapo<br>
-                    Haiti: Mwen renmen ou<br>
-                    Hungria: Szeretlek<br>
-                    Índia: Main tumse pyar karta hoon<br>
-                    Indonésia: Saya cinta kamu<br>
-                    Irã: Dooset daram<br>
-                    Irlanda: Is breá liom tú<br>
-                    Islândia: Ég elska þig<br>
-                    Israel: Ani ohev otach<br>
-                    Itália: Ti amo<br>
-                    Japão: Aishiteru<br>
-                    Lituânia: Aš tave myliu<br>
-                    Malásia: Saya cintakan mu<br>
-                    Mongólia: Bi nand durtai<br>
-                    Noruega: Jeg elsker deg<br>
-                    Países Baixos: Ik hou van je<br>
-                    Polônia: Kocham cię<br>
-                    Portugal: Amo-te<br>
-                    Quênia: Nakupenda<br>
-                    Romênia: Te iubesc<br>
-                    Rússia: Ya tebya lyublyu<br>
-                    Sérvia: Volim te<br>
-                    Suécia: Jag älskar dig<br>
-                    Tailândia: Phom rak khun<br>
-                    Tchéquia: Miluji tě<br>
-                    Turquia: Seni seviyorum<br>
-                    Ucrânia: Ya tebe kokhayu<br>
-                    Vietnã: Anh yêu em
-                </p>
+                <div class="grid-traducoes">
+                    <div class="item-traducao"><strong>Brasil:</strong> Eu te amo</div>
+                    <div class="item-traducao"><strong>África do Sul:</strong> Ek het jou lief</div>
+                    <div class="item-traducao"><strong>Alemanha:</strong> Ich liebe dich</div>
+                    <div class="item-traducao"><strong>Arábia Saudita:</strong> Ana uhibbuki</div>
+                    <div class="item-traducao"><strong>Argentina:</strong> Te amo</div>
+                    <div class="item-traducao"><strong>Armênia:</strong> Es kez sirum em</div>
+                    <div class="item-traducao"><strong>Bélgica:</strong> Ik hou van jou</div>
+                    <div class="item-traducao"><strong>Bulgária:</strong> Obicham te</div>
+                    <div class="item-traducao"><strong>Camboja:</strong> Sro shapes neak</div>
+                    <div class="item-traducao"><strong>China:</strong> Wo ai ni</div>
+                    <div class="item-traducao"><strong>Coreia do Sul:</strong> Saranghae</div>
+                    <div class="item-traducao"><strong>Croácia:</strong> Volim te</div>
+                    <div class="item-traducao"><strong>Dinamarca:</strong> Jeg elsker dig</div>
+                    <div class="item-traducao"><strong>Eslováquia:</strong> Ľúbim ťa</div>
+                    <div class="item-traducao"><strong>Eslovênia:</strong> Ljubim te</div>
+                    <div class="item-traducao"><strong>Espanha:</strong> Te amo</div>
+                    <div class="item-traducao"><strong>Estados Unidos:</strong> I love you</div>
+                    <div class="item-traducao"><strong>Etiópia:</strong> Afekrishalehu</div>
+                    <div class="item-traducao"><strong>Filipinas:</strong> Mahal kita</div>
+                    <div class="item-traducao"><strong>Finlândia:</strong> Minä rakastan sinua</div>
+                    <div class="item-traducao"><strong>França:</strong> Je t'aime</div>
+                    <div class="item-traducao"><strong>Grécia:</strong> S'agapo</div>
+                    <div class="item-traducao"><strong>Haiti:</strong> Mwen renmen ou</div>
+                    <div class="item-traducao"><strong>Hungria:</strong> Szeretlek</div>
+                    <div class="item-traducao"><strong>Índia:</strong> Main tumse pyar karta hoon</div>
+                    <div class="item-traducao"><strong>Indonésia:</strong> Saya cinta kamu</div>
+                    <div class="item-traducao"><strong>Irã:</strong> Dooset daram</div>
+                    <div class="item-traducao"><strong>Irlanda:</strong> Is breá liom tú</div>
+                    <div class="item-traducao"><strong>Islândia:</strong> Ég elska þig</div>
+                    <div class="item-traducao"><strong>Israel:</strong> Ani ohev otach</div>
+                    <div class="item-traducao"><strong>Itália:</strong> Ti amo</div>
+                    <div class="item-traducao"><strong>Japão:</strong> Aishiteru</div>
+                    <div class="item-traducao"><strong>Lituânia:</strong> Aš tave myliu</div>
+                    <div class="item-traducao"><strong>Malásia:</strong> Saya cintakan mu</div>
+                    <div class="item-traducao"><strong>Mongólia:</strong> Bi nand durtai</div>
+                    <div class="item-traducao"><strong>Noruega:</strong> Jeg elsker deg</div>
+                    <div class="item-traducao"><strong>Países Baixos:</strong> Ik hou van je</div>
+                    <div class="item-traducao"><strong>Polônia:</strong> Kocham cię</div>
+                    <div class="item-traducao"><strong>Portugal:</strong> Amo-te</div>
+                    <div class="item-traducao"><strong>Quênia:</strong> Nakupenda</div>
+                    <div class="item-traducao"><strong>Romênia:</strong> Te iubesc</div>
+                    <div class="item-traducao"><strong>Rússia:</strong> Ya tebya lyublyu</div>
+                    <div class="item-traducao"><strong>Sérvia:</strong> Volim te</div>
+                    <div class="item-traducao"><strong>Suécia:</strong> Jag älskar dig</div>
+                    <div class="item-traducao"><strong>Tailândia:</strong> Phom rak khun</div>
+                    <div class="item-traducao"><strong>Tchéquia:</strong> Miluji tě</div>
+                    <div class="item-traducao"><strong>Turquia:</strong> Seni seviyorum</div>
+                    <div class="item-traducao"><strong>Ucrânia:</strong> Ya tebe kokhayu</div>
+                    <div class="item-traducao"><strong>Vietnã:</strong> Anh yêu em</div>
+                </div>
+
+                <button class="btn-interativo" onclick="mostrarSurpresa()">Clique para uma Surpresa ❤️</button>
             </div>
         </main>
     </div>
 
+    <script>
+        // Criar corações caindo suavemente no fundo
+        function criarCoracao() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart-particle');
+            heart.innerHTML = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 4 + 's';
+            heart.style.fontSize = Math.random() * 10 + 15 + 'px';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 7000);
+        }
+
+        setInterval(criarCoracao, 400);
+
+        // Função do botão interativo
+        function mostrarSurpresa() {
+            alert('Você é o amor da minha vida, Cíntia! Obrigado por existir! 💕✨');
+        }
+    </script>
 </body>
 
 </html>
