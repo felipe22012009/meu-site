@@ -177,7 +177,7 @@
 
         .contador-num {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
             display: block;
@@ -406,16 +406,6 @@
         }
 
         /* Grid de Idiomas */
-        .grid-traducoes-header {
-            margin-top: 30px;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
         .busca-idioma {
             width: 100%;
             max-width: 300px;
@@ -444,7 +434,6 @@
             box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
         }
 
-        /* Custom Scrollbar */
         .grid-traducoes::-webkit-scrollbar {
             width: 6px;
         }
@@ -721,25 +710,25 @@
                 <div class="subtitulo-casal">Para Sempre Juntos • Nosso Amor Eterno</div>
             </header>
 
-            <!-- CONTADOR DE TEMPO / DESTINADO -->
+            <!-- CONTADOR DE TEMPO JUNTOS EM TEMPO REAL -->
             <div class="contador-container">
                 <div class="contador-titulo"><i class="fa-solid fa-hourglass-half"></i> Construindo Nossa História Dia a Dia</div>
                 <div class="contador-grid">
                     <div class="contador-item">
-                        <span class="contador-num" id="dias-juntos">∞</span>
+                        <span class="contador-num" id="dias-juntos">0</span>
                         <span class="contador-label">Dias de Amor</span>
                     </div>
                     <div class="contador-item">
-                        <span class="contador-num" id="horas-juntos">24</span>
+                        <span class="contador-num" id="horas-juntos">0</span>
                         <span class="contador-label">Horas por Dia</span>
                     </div>
                     <div class="contador-item">
-                        <span class="contador-num" id="minutos-juntos">60</span>
+                        <span class="contador-num" id="minutos-juntos">0</span>
                         <span class="contador-label">Minutos de Carinho</span>
                     </div>
                     <div class="contador-item">
-                        <span class="contador-num" id="segundos-juntos">3600</span>
-                        <span class="contador-label">Pensamentos em Você</span>
+                        <span class="contador-num" id="segundos-juntos">0</span>
+                        <span class="contador-label">Pensando em Você</span>
                     </div>
                 </div>
             </div>
@@ -935,7 +924,7 @@
         </div>
     </div>
 
-    <!-- SCRIPT JAVASCRIP APRIMORADO -->
+    <!-- SCRIPT JAVASCRIPT -->
     <script>
         /* ==========================================================================
            1. CANVAS DE PARTICULAS (CORAÇÕES DE FUNDO ANIMADOS)
@@ -996,16 +985,28 @@
         animateCanvas();
 
         /* ==========================================================================
-           2. CONTADOR REGRESSIVO DE TEMPO SIMULADO
+           2. CONTADOR DE TEMPO JUNTOS (1 ANO E 7 MESES DESDE O DIA 14)
            ========================================================================== */
-        let contadorDias = 365; // Pode ser personalizado com uma data de início real
+        // Data de início do namoro: 14 de Março de 2025
+        const dataInicio = new Date(2025, 2, 14, 0, 0, 0); 
+
         function atualizarContador() {
             const agora = new Date();
-            document.getElementById('horas-juntos').innerText = String(agora.getHours()).padStart(2, '0');
-            document.getElementById('minutos-juntos').innerText = String(agora.getMinutes()).padStart(2, '0');
-            document.getElementById('segundos-juntos').innerText = String(agora.getSeconds()).padStart(2, '0');
-            document.getElementById('dias-juntos').innerText = contadorDias;
+            const diferencaMs = agora - dataInicio;
+
+            // Cálculos de tempo total acumulado
+            const totalDias = Math.floor(diferencaMs / (1000 * 60 * 60 * 24));
+            const totalHoras = Math.floor(diferencaMs / (1000 * 60 * 60));
+            const totalMinutos = Math.floor(diferencaMs / (1000 * 60));
+            const totalSegundos = Math.floor(diferencaMs / 1000);
+
+            // Atualização dos elementos na tela com formatação
+            document.getElementById('dias-juntos').innerText = totalDias.toLocaleString('pt-BR');
+            document.getElementById('horas-juntos').innerText = totalHoras.toLocaleString('pt-BR');
+            document.getElementById('minutos-juntos').innerText = totalMinutos.toLocaleString('pt-BR');
+            document.getElementById('segundos-juntos').innerText = totalSegundos.toLocaleString('pt-BR');
         }
+
         setInterval(atualizarContador, 1000);
         atualizarContador();
 
@@ -1022,7 +1023,6 @@
                     btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
                     tocando = true;
                 }).catch(() => {
-                    // Se não houver arquivo real de áudio
                     alert('Tocando nossa música no coração! 💕 (Adicione um arquivo musica.mp3 para ouvir a música)');
                     btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
                     tocando = true;
