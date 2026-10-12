@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fernando & Cíntia — Nosso Amor Eterno</title>
-    
+
     <!-- Preconnect Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -96,14 +98,22 @@
             background: #ffffff;
             padding: 5px 20px;
             border-radius: 50px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             animation: pulse-heart 2s infinite;
         }
 
         @keyframes pulse-heart {
-            0% { transform: translateX(-50%) scale(1); }
-            50% { transform: translateX(-50%) scale(1.1); }
-            100% { transform: translateX(-50%) scale(1); }
+            0% {
+                transform: translateX(-50%) scale(1);
+            }
+
+            50% {
+                transform: translateX(-50%) scale(1.1);
+            }
+
+            100% {
+                transform: translateX(-50%) scale(1);
+            }
         }
 
         /* ==========================================================================
@@ -123,7 +133,7 @@
             font-size: 5rem;
             font-weight: normal;
             line-height: 1.1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
             margin-bottom: 10px;
         }
 
@@ -149,7 +159,7 @@
             padding: 25px;
             margin: 30px 0;
             text-align: center;
-            box-shadow: inset 0 0 15px rgba(255, 179, 193, 0.2), 0 8px 20px rgba(0,0,0,0.04);
+            box-shadow: inset 0 0 15px rgba(255, 179, 193, 0.2), 0 8px 20px rgba(0, 0, 0, 0.04);
             border: 1px solid var(--secondary);
         }
 
@@ -172,7 +182,7 @@
             padding: 15px 10px;
             border-radius: 12px;
             border: 1px solid rgba(255, 179, 193, 0.4);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
         }
 
         .contador-num {
@@ -244,7 +254,7 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
             border: 1px solid var(--secondary);
         }
 
@@ -352,7 +362,7 @@
             font-size: 0.95rem;
             font-weight: 600;
             color: var(--text-muted);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
             display: flex;
             align-items: center;
             gap: 15px;
@@ -431,16 +441,18 @@
             max-height: 380px;
             overflow-y: auto;
             border: 1px solid rgba(255, 255, 255, 0.9);
-            box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03);
         }
 
         .grid-traducoes::-webkit-scrollbar {
             width: 6px;
         }
+
         .grid-traducoes::-webkit-scrollbar-track {
             background: rgba(255, 179, 193, 0.2);
             border-radius: 10px;
         }
+
         .grid-traducoes::-webkit-scrollbar-thumb {
             background: var(--primary-light);
             border-radius: 10px;
@@ -453,7 +465,7 @@
             background: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
             border-left: 3px solid var(--primary-light);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
             transition: var(--transition-smooth);
         }
 
@@ -604,7 +616,7 @@
             margin-bottom: 10px;
             border: 1px solid var(--secondary);
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
         }
 
         .accordion-header {
@@ -688,7 +700,8 @@
                 flex-direction: column;
             }
 
-            .btn-interativo, .btn-secundario {
+            .btn-interativo,
+            .btn-secundario {
                 width: 100%;
                 justify-content: center;
             }
@@ -703,7 +716,7 @@
 
     <div class="main-wrapper">
         <div class="carta-envelope">
-            
+
             <!-- CABEÇALHO -->
             <header>
                 <h1>Fernando & Cíntia</h1>
@@ -712,7 +725,8 @@
 
             <!-- CONTADOR DE TEMPO JUNTOS EM TEMPO REAL -->
             <div class="contador-container">
-                <div class="contador-titulo"><i class="fa-solid fa-hourglass-half"></i> Construindo Nossa História Dia a Dia</div>
+                <div class="contador-titulo"><i class="fa-solid fa-hourglass-half"></i> Construindo Nossa História Dia a
+                    Dia</div>
                 <div class="contador-grid">
                     <div class="contador-item">
                         <span class="contador-num" id="dias-juntos">0</span>
@@ -742,7 +756,8 @@
 
                 <!-- Player Sonoro Simulado / Real -->
                 <div class="audio-player-custom">
-                    <button class="audio-btn" id="play-btn" onclick="toggleAudio()"><i class="fa-solid fa-play"></i></button>
+                    <button class="audio-btn" id="play-btn" onclick="toggleAudio()"><i
+                            class="fa-solid fa-play"></i></button>
                     <div class="audio-info">
                         <span class="audio-title">Nossa Trilha Sonora</span>
                         <span class="audio-sub">Fernando & Cíntia</span>
@@ -761,16 +776,29 @@
                     <h2><i class="fa-solid fa-heart"></i> Para Meu Grande Amor</h2>
                     <p>Querida <span class="destaque-texto">Cíntia</span>,</p>
                     <p>
-                        Escrevo esta carta para deixar gravado, com todas as letras, o tamanho do amor e do orgulho imensurável que sinto por você. Você é o grande amor da minha vida, a mulher dos meus sonhos mais bonitos, minha baixinha, minha princesa, meu anjo, minha pititca... a minha única e eterna Cíntia.
+                        Escrevo esta carta para deixar gravado, com todas as letras, o tamanho do amor e do orgulho
+                        imensurável que sinto por você. Você é o grande amor da minha vida, a mulher dos meus sonhos
+                        mais bonitos, minha baixinha, minha princesa, meu anjo, minha pititca... a minha única e eterna
+                        Cíntia.
                     </p>
                     <p>
-                        A vida tem seus caminhos, voltas e desafios, mas continuo firme aqui, bem, estudando informática e me dedicando diariamente para construir um futuro sólido, confortável e feliz ao seu lado. Quero me aprofundar cada vez mais nos meus estudos, me formar em uma excelente faculdade, conquistar um ótimo emprego, realizar nosso sonho de ter nossa moto e dar orgulho aos meus pais. Mas, acima de qualquer coisa, o meu maior objetivo de vida é dedicar todo o meu amor a você e construir a nossa família.
+                        A vida tem seus caminhos, voltas e desafios, mas continuo firme aqui, bem, estudando informática
+                        e me dedicando diariamente para construir um futuro sólido, confortável e feliz ao seu lado.
+                        Quero me aprofundar cada vez mais nos meus estudos, me formar em uma excelente faculdade,
+                        conquistar um ótimo emprego, realizar nosso sonho de ter nossa moto e dar orgulho aos meus pais.
+                        Mas, acima de qualquer coisa, o meu maior objetivo de vida é dedicar todo o meu amor a você e
+                        construir a nossa família.
                     </p>
                     <p>
-                        Quero que você saiba, com toda a certeza e convicção do meu coração, que estou com você para o que der e vier. Independentemente da hora, do lugar, da distância ou das dificuldades que apareçam no nosso caminho, estarei segurando a sua mão. Não te largo por nada neste mundo. É você e eu, lado a lado, até o fim da minha vida.
+                        Quero que você saiba, com toda a certeza e convicção do meu coração, que estou com você para o
+                        que der e vier. Independentemente da hora, do lugar, da distância ou das dificuldades que
+                        apareçam no nosso caminho, estarei segurando a sua mão. Não te largo por nada neste mundo. É
+                        você e eu, lado a lado, até o fim da minha vida.
                     </p>
                     <p>
-                        O meu maior e mais bonito sonho é ver você vestida de branco caminhando em minha direção no altar, enquanto nossos filhos seguram o seu véu. Quero realizar cada meta, comemorar cada vitória e viver cada segundo desta existência ao seu lado.
+                        O meu maior e mais bonito sonho é ver você vestida de branco caminhando em minha direção no
+                        altar, enquanto nossos filhos seguram o seu véu. Quero realizar cada meta, comemorar cada
+                        vitória e viver cada segundo desta existência ao seu lado.
                     </p>
                     <p>
                         Eu te amo, meu amor! Hoje, amanhã e para todo o sempre.
@@ -790,7 +818,8 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                             <div class="accordion-content">
-                                O seu sorriso ilumina até os meus dias mais difíceis. Ver você feliz é o que me dá forças para continuar lutando e estudando todos os dias.
+                                O seu sorriso ilumina até os meus dias mais difíceis. Ver você feliz é o que me dá
+                                forças para continuar lutando e estudando todos os dias.
                             </div>
                         </div>
                         <div class="accordion-item">
@@ -799,7 +828,8 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                             <div class="accordion-content">
-                                A forma como você me trata, me apoia e me dá carinho faz com que eu me sinta o homem mais sortudo do planeta.
+                                A forma como você me trata, me apoia e me dá carinho faz com que eu me sinta o homem
+                                mais sortudo do planeta.
                             </div>
                         </div>
                         <div class="accordion-item">
@@ -808,7 +838,8 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                             <div class="accordion-content">
-                                Amo saber que compartilhamos os mesmos sonhos: nossa casa, nossa moto, nossa faculdade, nosso casamento e a nossa linda família.
+                                Amo saber que compartilhamos os mesmos sonhos: nossa casa, nossa moto, nossa faculdade,
+                                nosso casamento e a nossa linda família.
                             </div>
                         </div>
                     </div>
@@ -823,7 +854,8 @@
                         <li><i class="fa-solid fa-briefcase"></i> Conquistar um excelente emprego</li>
                         <li><i class="fa-solid fa-hands-holding-child"></i> Dar orgulho para meus pais</li>
                         <li><i class="fa-solid fa-heart-circle-check"></i> Dedicar todo meu amor a você</li>
-                        <li><i class="fa-solid fa-house-chimney-window"></i> Ter nossos filhos e construir nossa família</li>
+                        <li><i class="fa-solid fa-house-chimney-window"></i> Ter nossos filhos e construir nossa família
+                        </li>
                     </ul>
                 </section>
 
@@ -831,15 +863,19 @@
                 <div class="declaracao">
                     <h3>EU TE AMO, MEU AMOR!!!</h3>
                     <p class="texto-apelidos">
-                        Para o grande amor da minha vida e para a mulher que vou ver de branco no altar, com nossos baixinhos como noivinhos segurando seu véu branco.<br><br>
-                        <strong>Cíntia Roden Arente</strong> — mais conhecida como meu amor, minha vida, minha baixinha, minha princesa, moh, mor, amor, meu bem, meu anjo, minha nega, minha Cintiazinha, minha pititca!
+                        Para o grande amor da minha vida e para a mulher que vou ver de branco no altar, com nossos
+                        baixinhos como noivinhos segurando seu véu branco.<br><br>
+                        <strong>Cíntia Roden Arente</strong> — mais conhecida como meu amor, minha vida, minha baixinha,
+                        minha princesa, moh, mor, amor, meu bem, meu anjo, minha nega, minha Cintiazinha, minha pititca!
                     </p>
 
-                    <h4 style="color: var(--primary-dark); font-family: 'Playfair Display', serif; margin-bottom: 15px; font-size: 1.5rem;">
+                    <h4
+                        style="color: var(--primary-dark); font-family: 'Playfair Display', serif; margin-bottom: 15px; font-size: 1.5rem;">
                         <i class="fa-solid fa-earth-americas"></i> Dizendo "Eu Te Amo" Pelo Mundo
                     </h4>
-                    
-                    <input type="text" id="filtro-idioma" class="busca-idioma" placeholder="🔍 Buscar país ou tradução..." onkeyup="filtrarIdiomas()">
+
+                    <input type="text" id="filtro-idioma" class="busca-idioma"
+                        placeholder="🔍 Buscar país ou tradução..." onkeyup="filtrarIdiomas()">
 
                     <div class="grid-traducoes" id="grid-traducoes">
                         <div class="item-traducao"><strong>Brasil 🇧🇷</strong> Eu te amo</div>
@@ -906,7 +942,8 @@
             </main>
 
             <footer>
-                <p>Feito com todo amor do mundo por <strong>Fernando</strong> para <strong>Cíntia</strong> <i class="fa-solid fa-heart"></i></p>
+                <p>Feito com todo amor do mundo por <strong>Fernando</strong> para <strong>Cíntia</strong> <i
+                        class="fa-solid fa-heart"></i></p>
             </footer>
         </div>
     </div>
@@ -915,10 +952,12 @@
     <div class="modal-overlay" id="modal-surpresa">
         <div class="modal-card">
             <button class="close-modal" onclick="fecharSurpresa()">&times;</button>
-            <i class="fa-solid fa-heart-circle-bolt" style="font-size: 3.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+            <i class="fa-solid fa-heart-circle-bolt"
+                style="font-size: 3.5rem; color: var(--primary); margin-bottom: 15px;"></i>
             <h4>Mensagem Especial ❤️</h4>
             <p id="texto-surpresa-dinamico">
-                Cíntia, você é a pessoa mais incrível que já conheci. Obrigado por caminhar ao meu lado e tornar cada dia mais feliz!
+                Cíntia, você é a pessoa mais incrível que já conheci. Obrigado por caminhar ao meu lado e tornar cada
+                dia mais feliz!
             </p>
             <button class="btn-interativo" onclick="novaMensagemSurpresa()">Ver Outra Mensagem 💌</button>
         </div>
@@ -985,10 +1024,10 @@
         animateCanvas();
 
         /* ==========================================================================
-           2. CONTADOR DE TEMPO JUNTOS (1 ANO E 7 MESES DESDE O DIA 14)
-           ========================================================================== */
-        // Data de início do namoro: 14 de Março de 2025
-        const dataInicio = new Date(2025, 2, 14, 0, 0, 0); 
+      2. CONTADOR DE TEMPO JUNTOS (1 ANO E 7 MESES DESDE O DIA 14)
+      ========================================================================== */
+        // Data de início do namoro: 14 de Março de 2025 (1 ano e 7 meses atrás)
+        const dataInicio = new Date(2025, 2, 14, 0, 0, 0);
 
         function atualizarContador() {
             const agora = new Date();
@@ -1017,7 +1056,7 @@
         function toggleAudio() {
             const audio = document.getElementById('musica-amor');
             const btn = document.getElementById('play-btn');
-            
+
             if (!tocando) {
                 audio.play().then(() => {
                     btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
